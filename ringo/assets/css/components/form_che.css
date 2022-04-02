@@ -1,0 +1,19 @@
+.form{
+    background-color: var(--green-700);
+}
+.form__che{
+    display: none;
+}
+.form__che__label{
+    position: relative;
+    color: var(--white-);
+    display: flex;
+    align-items: center;
+}
+.form__che__label::before{
+    content: url(../../icons/che-none.svg);
+    margin-right: 10px;
+}
+.form__che:checked + .form__che__label::before{
+    content: url(../../icons/che.svg);
+}

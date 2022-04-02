@@ -1,0 +1,315 @@
+.header-menu-mob {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    background-color: var(--white-900);
+    padding: 30px 26px;
+    top: 100%;
+    height: calc(100vh - 100px);
+    transition: all .4s;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.header-menu-mob.is-active {
+    transform: translateX(0);
+}
+
+.header-menu-mob__menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu-mob__menu__item {
+    color: var(--black-700);
+    font-size: 1.125rem;
+}
+
+.header-menu-mob__menu__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.header-menu-mob__soc-media {
+    margin-bottom: auto;
+    margin-top: 40px;
+}
+
+.header-menu-mob__soc-media__item svg {
+    height: 20px;
+}
+
+.header-menu-mob__soc-media__item:not(:last-child) {
+    margin-right: 18px;
+}
+
+.header-menu-mob__tel {
+    font-family: var(--fontFamily-Lato);
+    font-weight: 600;
+    font-size: 1.25;
+    color: var(--green-700);
+    display: flex;
+    align-items: center;
+}
+
+.header-menu-mob__tel svg {
+    width: 22px;
+    margin-right: 7px;
+}
+
+.header-menu-mob__link {
+    margin-top: 31px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media screen and (min-width: 921px) {
+    .header-menu-mob {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 521px) {
+    .header-menu-mob__soc-media,
+    .header-menu-mob__tel,
+    .header-menu-mob__link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header-menu-mob {
+        width: 100%;
+        padding: 10px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 970px) {
+    .header__tel {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .header__menu {
+        display: none;
+    }
+    .header__soc-media {
+        margin-left: auto;
+    }
+    .header__mob-menu {
+        display: block;
+        border: none;
+        background-color: transparent;
+        width: 34px;
+        height: 34px;
+        position: relative;
+        margin-left: 50px;
+    }
+    .header__mob-menu__span {
+        position: absolute;
+        display: block;
+        width: 73%;
+        height: 1px;
+        background-color: var(--black-700);
+        border-radius: 1px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .header__mob-menu__span::after,
+    .header__mob-menu__span::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background-color: var(--black-700);
+        border-radius: 1px;
+        display: block;
+        left: 0;
+        transition: all .4s;
+    }
+    .header__mob-menu__span::after {
+        top: -9px;
+    }
+    .header__mob-menu__span::before {
+        bottom: -9px;
+    }
+    .header__mob-menu.is-active .header__mob-menu__span {
+        background-color: transparent;
+    }
+    .header__mob-menu.is-active .header__mob-menu__span::after,
+    .header__mob-menu.is-active .header__mob-menu__span::before {
+        top: 50%;
+        left: 50%;
+    }
+    .header__mob-menu.is-active .header__mob-menu__span::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    .header__mob-menu.is-active .header__mob-menu__span::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header__tel,
+    .header__soc-media {
+        display: none;
+    }
+    .header__mob-menu {
+        margin-left: 85vw;
+        margin-top: -8%;
+    }
+
+    .animation-text-block__text {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px) {
+
+    .animation-text-block__text {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .lines__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 120%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .lines__lists {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lines__link {
+        border: none;
+    }
+
+    .wedo__title {
+        font-size: 28px;
+    }
+
+    .wedo__list {
+        align-items: baseline;
+    }
+
+    .wedo__point {
+        max-width: 400px;
+        width: 49%;
+    }
+
+    .wedo__point__title {
+        font-size: 18px;
+    }
+
+    .victory__title {
+        font-size: 20px;
+    }
+
+    .victory__footer__block {
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .victory__footer__block__item:last-child {
+        padding-left: 35px;
+        padding-right: 10px;
+    }
+
+    .victory__footer__block__item:last-child {
+        border:none;
+    }
+
+    .victory__footer__block__item:first-child {
+        padding-right: 20px;
+    }
+
+    .form {
+        display: none;
+    }
+
+    .stages__title {
+        font-size: 24px;
+    }
+
+    .stages__list {
+        flex-direction: column;
+    }
+
+    .stages__item__text {
+        margin-bottom: 15%;
+    }
+
+    .product__title {
+        font-size: 24px;
+    }
+
+    .product__item__block-img {
+        width: 320px;
+    }
+
+    .product__item__title {
+        font-size: 15px;
+        font-weight: normal;
+        width: 50px;
+        margin: 0 auto;
+    }
+
+    .product__item__text {
+        color: #282B22;
+        opacity: 0.5;
+        font-size: 16px;
+        margin-left: 15%;
+    }
+
+    .product__slider__navigation__btn {
+        height: 30px;
+        width: 30px;
+        margin-top: 30%;
+    }
+
+    .present__block {
+        width: 320px;
+        padding: 5rem 0;
+    }
+
+    .present__title {
+        font-size: 24px;
+    }
+
+    .present__product__img, .present__product {
+        display: none;
+    }
+
+    .present__text {
+        font-size: 16px;
+    }
+
+    .partners__title {
+        font-size: 24px;
+    }
+
+    .footer__soc-media {
+        margin-bottom: 35%;
+    }
+
+    .footer__bottom__list {
+        opacity: 35%;
+    }
+}

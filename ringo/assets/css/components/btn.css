@@ -1,0 +1,33 @@
+.btn {
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+.btn-brown:hover,
+.btn-brown:focus {
+    background-color: var(--brown-600);
+}
+
+.btn-brown {
+    background-color: var(--brown-700);
+    color: var(--white-900);
+    font-weight: bold;
+    text-align: center;
+    padding: 22px 56px;
+    transition: all .4s;
+}
+
+.btn-circle-slider {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .4s;
+}
+
+.btn-circle-slider svg {
+    transition: all .4s;
+}

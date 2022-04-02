@@ -1,0 +1,18 @@
+.link-svg svg,
+.link-svg-brown svg {
+    transition: all .4s;
+}
+
+.link-svg:focus svg,
+.link-svg:hover svg {
+    fill: var(--black-700);
+}
+
+.link-svg-brown:focus svg,
+.link-svg-brown:hover svg {
+    fill: var(--brown-700);
+}
+
+.section-m-140 {
+    margin: 140px 0;
+}
